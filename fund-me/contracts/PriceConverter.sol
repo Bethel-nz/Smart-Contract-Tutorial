@@ -19,6 +19,12 @@ library PriceConverter {
         // return uint256(answer * 1e10); // 1* 10 ** 10 == 10000000000
     }
 
+ function getVersion() internal view returns (uint256){
+        // ETH/USD price feed address of Sepolia Network.
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
+        return priceFeed.version();
+    }
+
     // 1000000000
     function getConversionRate(uint256 ethAmount)
         internal
