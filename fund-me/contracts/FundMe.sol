@@ -10,7 +10,7 @@ contract FundMe {
     mapping(address => uint256) public addressToAmountFunded;
     address[] public funders;
     address public /* immutable */ i_owner;
-    uint256 public constant MINIMUM_USD = 20 * 1e18;
+    uint256 public constant MINIMUM_USD = 50 * 1e18;
     
     constructor() {
         i_owner = msg.sender;
